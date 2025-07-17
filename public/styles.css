@@ -32,7 +32,8 @@ body {
     margin-bottom: 40px;
 }
 .banner {
-    background: url('header-without-backgound.png') no-repeat center center;
+    background: url('new-header.png') no-repeat center center;
+    /* background: url('header-without-backgound.png') no-repeat center center; */
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -45,6 +46,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    border-radius: 80px;
 }
 
 @media (min-width: 768px) {
