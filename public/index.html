@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chá do Theo - Festa Junina</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header com tema de festa junina -->
+        <header class="header">
+            <div class="banner">
+                <!-- <div class="lanterns">
+                    <div class="lantern"></div>
+                    <div class="lantern"></div>
+                    <div class="lantern"></div>
+                </div>
+                <h1 class="title">
+                    <i class="fas fa-baby"></i>
+                    Chá do Theo
+                    <i class="fas fa-baby"></i>
+                </h1>
+                <p class="subtitle">Festa Junina</p>
+                <div class="lanterns">
+                    <div class="lantern"></div>
+                    <div class="lantern"></div>
+                    <div class="lantern"></div>
+                </div> -->
+            </div>
+        </header>
+
+        <!-- Formulário principal -->
+        <main class="main-content">
+            <div class="form-container">
+                                    <div class="welcome-message">
+                        <h2>🎉 Você faz parte desse momento especial!</h2>
+                        <p>Escolha um ou mais presentes da lista abaixo para o nosso querido Theo</p>
+                        <!-- <div class="estatisticas-gerais">
+                            <div class="stat-item">
+                                <span class="stat-number" id="totalPresentes">0</span>
+                                <span class="stat-label">Total de Presentes</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="disponiveis">0</span>
+                                <span class="stat-label">Disponíveis</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="esgotados">0</span>
+                                <span class="stat-label">Esgotados</span>
+                            </div>
+                        </div> -->
+                    </div>
+
+                <form id="presenteForm" class="presente-form">
+                    <!-- Campo do nome -->
+                    <div class="form-group">
+                        <label for="nome" class="form-label">
+                            <i class="fas fa-user"></i>
+                            Seu Nome:
+                        </label>
+                        <input 
+                            type="text" 
+                            id="nome" 
+                            name="nome" 
+                            class="form-input" 
+                            required 
+                            placeholder="Digite seu nome completo"
+                        >
+                    </div>
+
+                    <!-- Lista de presentes -->
+                    <div class="form-group">
+                        <label class="form-label">
+                            <i class="fas fa-gift"></i>
+                            Escolha os Presentes:
+                        </label>
+                        <div id="presentesList" class="presentes-grid">
+                            <!-- Os presentes serão carregados dinamicamente aqui -->
+                            <div class="loading">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                Carregando presentes...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botão de envio -->
+                    <div class="form-group">
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Escolha
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>🎊 Obrigado por participar desta celebração especial! 🎊</p>
+                <div class="decorations">
+                    <span class="decoration">🌽</span>
+                    <span class="decoration">🎪</span>
+                    <span class="decoration">👶</span>
+                    <span class="decoration">🎪</span>
+                    <span class="decoration">🌽</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal de sucesso -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-check-circle"></i> Sucesso!</h3>
+            </div>
+            <div class="modal-body">
+                <p id="successMessage">Sua escolha foi registrada com sucesso!</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn" onclick="closeModal()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de erro -->
+    <div id="errorModal" class="modal">
+        <div class="modal-content error">
+            <div class="modal-header">
+                <h3><i class="fas fa-exclamation-triangle"></i> Erro</h3>
+            </div>
+            <div class="modal-body">
+                <p id="errorMessage">Ocorreu um erro ao processar sua solicitação.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn" onclick="closeModal()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "nome": "Fraldas P",
+    "quantidade": 1,
+    "escolhido": 1,
+    "ativo": false
+  },
+  {
+    "id": 2,
+    "nome": "Fraldas M",
+    "quantidade": 5,
+    "escolhido": 5,
+    "ativo": false
+  },
+  {
+    "id": 3,
+    "nome": "Fraldas G",
+    "quantidade": 5,
+    "escolhido": 5,
+    "ativo": false
+  },
+  {
+    "id": 4,
+    "nome": "Mamadeira",
+    "quantidade": 3,
+    "escolhido": 1,
+    "ativo": true
+  },
+  {
+    "id": 5,
+    "nome": "Chupeta",
+    "quantidade": 4,
+    "escolhido": 0,
+    "ativo": true
+  },
+  {
+    "id": 6,
+    "nome": "Toalha de Banho",
+    "quantidade": 3,
+    "escolhido": 0,
+    "ativo": true
+  },
+  {
+    "id": 7,
+    "nome": "Roupinhas 0-3 meses",
+    "quantidade": 6,
+    "escolhido": 0,
+    "ativo": true
+  },
+  {
+    "id": 8,
+    "nome": "Roupinhas 3-6 meses",
+    "quantidade": 6,
+    "escolhido": 0,
+    "ativo": true
+  },
+  {
+    "id": 9,
+    "nome": "Sapatinhos",
+    "quantidade": 4,
+    "escolhido": 0,
+    "ativo": true
+  },
+  {
+    "id": 10,
+    "nome": "Cobertor",
+    "quantidade": 2,
+    "escolhido": 0,
+    "ativo": true
+  },
+  {
+    "id": 11,
+    "nome": "Carrinho de Bebê",
+    "quantidade": 1,
+    "escolhido": 0,
+    "ativo": true
+  },
+  {
+    "id": 12,
+    "nome": "Berço",
+    "quantidade": 1,
+    "escolhido": 0,
+    "ativo": true
+  },
+  {
+    "id": 13,
+    "nome": "Banheira",
+    "quantidade": 2,
+    "escolhido": 0,
+    "ativo": true
+  },
+  {
+    "id": 14,
+    "nome": "Pomada para Assadura",
+    "quantidade": 5,
+    "escolhido": 0,
+    "ativo": true
+  },
+  {
+    "id": 15,
+    "nome": "Shampoo Infantil",
+    "quantidade": 4,
+    "escolhido": 0,
+    "ativo": true
+  }
+]
