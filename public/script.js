@@ -251,54 +251,54 @@ document.getElementById('nome').addEventListener('input', atualizarBotaoEnvio);
 function adicionarEfeitosVisuais() {
     // Efeito de confete quando uma escolha é feita
     document.addEventListener('presenteSelecionado', function() {
-        criarConfete();
+        // criarConfete();
     });
 }
 
 // Criar efeito de confete
-function criarConfete() {
-    const cores = ['#ff6b6b', '#ffa726', '#66bb6a', '#42a5f5', '#ab47bc', '#ffeb3b'];
+// function criarConfete() {
+//     const cores = ['#ff6b6b', '#ffa726', '#66bb6a', '#42a5f5', '#ab47bc', '#ffeb3b'];
     
-    for (let i = 0; i < 20; i++) {
-        setTimeout(() => {
-            const confete = document.createElement('div');
-            confete.style.cssText = `
-                position: fixed;
-                top: -10px;
-                left: ${Math.random() * window.innerWidth}px;
-                width: 10px;
-                height: 10px;
-                background: ${cores[Math.floor(Math.random() * cores.length)]};
-                border-radius: 50%;
-                pointer-events: none;
-                z-index: 9999;
-                animation: confeteFall 3s linear forwards;
-            `;
+//     for (let i = 0; i < 20; i++) {
+//         setTimeout(() => {
+//             const confete = document.createElement('div');
+//             confete.style.cssText = `
+//                 position: fixed;
+//                 top: -10px;
+//                 left: ${Math.random() * window.innerWidth}px;
+//                 width: 10px;
+//                 height: 10px;
+//                 background: ${cores[Math.floor(Math.random() * cores.length)]};
+//                 border-radius: 50%;
+//                 pointer-events: none;
+//                 z-index: 9999;
+//                 animation: confeteFall 3s linear forwards;
+//             `;
             
-            document.body.appendChild(confete);
+//             document.body.appendChild(confete);
             
-            setTimeout(() => {
-                confete.remove();
-            }, 3000);
-        }, i * 100);
-    }
-}
+//             setTimeout(() => {
+//                 confete.remove();
+//             }, 3000);
+//         }, i * 100);
+//     }
+// }
 
 // Adicionar CSS para animação do confete
-const confeteStyle = document.createElement('style');
-confeteStyle.textContent = `
-    @keyframes confeteFall {
-        0% {
-            transform: translateY(-10px) rotate(0deg);
-            opacity: 1;
-        }
-        100% {
-            transform: translateY(100vh) rotate(360deg);
-            opacity: 0;
-        }
-    }
-`;
-document.head.appendChild(confeteStyle);
+// const confeteStyle = document.createElement('style');
+// confeteStyle.textContent = `
+//     @keyframes confeteFall {
+//         0% {
+//             transform: translateY(-10px) rotate(0deg);
+//             opacity: 1;
+//         }
+//         100% {
+//             transform: translateY(100vh) rotate(360deg);
+//             opacity: 0;
+//         }
+//     }
+// `;
+// document.head.appendChild(confeteStyle);
 
 // Inicializar efeitos visuais
 adicionarEfeitosVisuais();
