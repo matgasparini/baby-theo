@@ -144,14 +144,14 @@ function atualizarBotaoEnvio() {
     const temPresentes = selectedPresentes.size > 0;
     
     // Botão habilitado se tem nome, mas mostra mensagem diferente baseada na seleção de presentes
-    submitBtn.disabled = !nome;
+    submitBtn.disabled = !nome || !temPresentes;
     
     if (!nome) {
         submitBtn.textContent = 'Digite seu nome';
     } else if (!temPresentes) {
         submitBtn.textContent = 'Escolha pelo menos um presente';
     } else {
-        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Escolha';
+        submitBtn.innerHTML = 'Enviar';
     }
 }
 
@@ -212,7 +212,7 @@ async function handleFormSubmit(event) {
     } finally {
         // Reabilitar botão
         submitBtn.disabled = false;
-        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Escolha';
+        submitBtn.innerHTML = 'Enviar';
     }
 }
 
