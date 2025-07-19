@@ -1,106 +1,148 @@
 [
   {
     "id": 1,
-    "nome": "Fraldas P",
+    "nome": "Fralda RN",
     "quantidade": 1,
-    "escolhido": 1,
-    "ativo": false
+    "escolhido": 0,
+    "ativo": true
   },
   {
     "id": 2,
-    "nome": "Fraldas M",
+    "nome": "Fralda P",
     "quantidade": 5,
-    "escolhido": 5,
-    "ativo": false
+    "escolhido": 0,
+    "ativo": true
   },
   {
     "id": 3,
-    "nome": "Fraldas G",
+    "nome": "Fralda M",
     "quantidade": 5,
-    "escolhido": 5,
-    "ativo": false
+    "escolhido": 0,
+    "ativo": true
   },
   {
     "id": 4,
-    "nome": "Mamadeira",
-    "quantidade": 3,
-    "escolhido": 1,
+    "nome": "Fralda G",
+    "quantidade": 5,
+    "escolhido": 0,
     "ativo": true
   },
   {
     "id": 5,
-    "nome": "Chupeta",
-    "quantidade": 4,
+    "nome": "Mamadeira P",
+    "quantidade": 1,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 6,
-    "nome": "Toalha de Banho",
-    "quantidade": 3,
+    "nome": "Pomada antiassaduras",
+    "quantidade": 20,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 7,
-    "nome": "Roupinhas 0-3 meses",
-    "quantidade": 6,
+    "nome": "Lenço umedecido",
+    "quantidade": 10,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 8,
-    "nome": "Roupinhas 3-6 meses",
-    "quantidade": 6,
-    "escolhido": 0,
-    "ativo": true
-  },
-  {
-    "id": 9,
-    "nome": "Sapatinhos",
-    "quantidade": 4,
-    "escolhido": 0,
-    "ativo": true
-  },
-  {
-    "id": 10,
-    "nome": "Cobertor",
-    "quantidade": 2,
-    "escolhido": 0,
-    "ativo": true
-  },
-  {
-    "id": 11,
-    "nome": "Carrinho de Bebê",
+    "nome": "Mamadeira M",
     "quantidade": 1,
     "escolhido": 0,
     "ativo": true
   },
   {
+    "id": 9,
+    "nome": "Mamadeira G",
+    "quantidade": 1,
+    "escolhido": 0,
+    "ativo": true
+  },
+  {
+    "id": 10,
+    "nome": "Chupeta RN",
+    "quantidade": 1,
+    "escolhido": 0,
+    "ativo": true
+  },
+  {
+    "id": 11,
+    "nome": "Babador",
+    "quantidade": 2,
+    "escolhido": 0,
+    "ativo": true
+  },
+  {
     "id": 12,
-    "nome": "Berço",
+    "nome": "Garrafa térmica para higiene",
     "quantidade": 1,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 13,
-    "nome": "Banheira",
+    "nome": "Meias",
     "quantidade": 2,
-    "escolhido": 0,
+    "escolhido": 1,
     "ativo": true
   },
   {
     "id": 14,
-    "nome": "Pomada para Assadura",
-    "quantidade": 5,
+    "nome": "Mordedor",
+    "quantidade": 1,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 15,
-    "nome": "Shampoo Infantil",
-    "quantidade": 4,
+    "nome": "Termômetro para bebê",
+    "quantidade": 1,
+    "escolhido": 0,
+    "ativo": true
+  },
+  {
+    "id": 16,
+    "nome": "Óleo para bebê",
+    "quantidade": 1,
+    "escolhido": 0,
+    "ativo": true
+  },
+  {
+    "id": 17,
+    "nome": "Escova/pente para bebê",
+    "quantidade": 1,
+    "escolhido": 0,
+    "ativo": true
+  },
+  {
+    "id": 18,
+    "nome": "Hidratante para bebê",
+    "quantidade": 1,
+    "escolhido": 0,
+    "ativo": true
+  },
+  {
+    "id": 19,
+    "nome": "Kit manicure para bebê",
+    "quantidade": 1,
+    "escolhido": 0,
+    "ativo": true
+  },
+  {
+    "id": 20,
+    "nome": "Aspirador nasal",
+    "quantidade": 1,
+    "escolhido": 1,
+    "ativo": false
+  },
+  {
+    "id": 21,
+    "nome": "Toalha banho",
+    "quantidade": 2,
     "escolhido": 0,
     "ativo": true
   }

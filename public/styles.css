@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Fredoka', sans-serif;
-    background: url('background.jpg') no-repeat center center fixed;
+    background: url('background.png') no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
     color: #333;
@@ -32,7 +32,7 @@ body {
     margin-bottom: 40px;
 }
 .banner {
-    background: url('new-header.png') no-repeat center center;
+    background: url('header.png') no-repeat center center;
     /* background: url('header-without-backgound.png') no-repeat center center; */
     background-size: cover;
     position: relative;
