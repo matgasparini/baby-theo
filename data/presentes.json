@@ -2,28 +2,28 @@
   {
     "id": 1,
     "nome": "Fralda RN",
-    "quantidade": 1,
+    "quantidade": 3,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 2,
     "nome": "Fralda P",
-    "quantidade": 5,
+    "quantidade": 10,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 3,
     "nome": "Fralda M",
-    "quantidade": 5,
+    "quantidade": 20,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 4,
     "nome": "Fralda G",
-    "quantidade": 5,
+    "quantidade": 20,
     "escolhido": 0,
     "ativo": true
   },
@@ -87,7 +87,7 @@
     "id": 13,
     "nome": "Meias",
     "quantidade": 2,
-    "escolhido": 1,
+    "escolhido": 0,
     "ativo": true
   },
   {
@@ -136,8 +136,8 @@
     "id": 20,
     "nome": "Aspirador nasal",
     "quantidade": 1,
-    "escolhido": 1,
-    "ativo": false
+    "escolhido": 0,
+    "ativo": true
   },
   {
     "id": 21,

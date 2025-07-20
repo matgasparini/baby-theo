@@ -25,10 +25,10 @@ if (!fs.existsSync('data')) {
 // Inicializar dados dos presentes se não existir
 if (!fs.existsSync(PRESENTES_FILE)) {
     const presentesIniciais = [
-        { id: 1, nome: "Fralda RN", quantidade: 1, escolhido: 0, ativo: true },
-        { id: 2, nome: "Fralda P", quantidade: 5, escolhido: 0, ativo: true },
-        { id: 3, nome: "Fralda M", quantidade: 5, escolhido: 0, ativo: true },
-        { id: 4, nome: "Fralda G", quantidade: 5, escolhido: 0, ativo: true },
+        { id: 1, nome: "Fralda RN", quantidade: 3, escolhido: 0, ativo: true },
+        { id: 2, nome: "Fralda P", quantidade: 10, escolhido: 0, ativo: true },
+        { id: 3, nome: "Fralda M", quantidade: 20, escolhido: 0, ativo: true },
+        { id: 4, nome: "Fralda G", quantidade: 20, escolhido: 0, ativo: true },
         { id: 5, nome: "Mamadeira P", quantidade: 1, escolhido: 0, ativo: true },
         { id: 6, nome: "Pomada antiassaduras", quantidade: 20, escolhido: 0, ativo: true },
         { id: 7, nome: "Lenço umedecido", quantidade: 10, escolhido: 0, ativo: true },
