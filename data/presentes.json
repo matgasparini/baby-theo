@@ -1,148 +1,145 @@
 [
   {
     "id": 1,
-    "nome": "Fralda RN",
-    "quantidade": 3,
+    "nome": "Fralda P",
+    "categoria": "fralda",
+    "quantidade": 25,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 2,
-    "nome": "Fralda P",
-    "quantidade": 10,
+    "nome": "Fralda M",
+    "categoria": "fralda",
+    "quantidade": 35,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 3,
-    "nome": "Fralda M",
-    "quantidade": 20,
+    "nome": "Fralda G",
+    "categoria": "fralda",
+    "quantidade": 35,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 4,
-    "nome": "Fralda G",
-    "quantidade": 20,
+    "nome": "Pão de Queijo",
+    "categoria": "comida",
+    "quantidade": 7,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 5,
-    "nome": "Mamadeira P",
-    "quantidade": 1,
+    "nome": "Bolo de Cenoura",
+    "categoria": "comida",
+    "quantidade": 2,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 6,
-    "nome": "Pomada antiassaduras",
-    "quantidade": 20,
+    "nome": "Torrada com pastainha",
+    "categoria": "comida",
+    "quantidade": 7,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 7,
-    "nome": "Lenço umedecido",
-    "quantidade": 10,
+    "nome": "Sanduiche queijo e presunto",
+    "categoria": "comida",
+    "quantidade": 7,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 8,
-    "nome": "Mamadeira M",
-    "quantidade": 1,
+    "nome": "Quiche",
+    "categoria": "comida",
+    "quantidade": 5,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 9,
-    "nome": "Mamadeira G",
-    "quantidade": 1,
+    "nome": "Torta salgada",
+    "categoria": "comida",
+    "quantidade": 4,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 10,
-    "nome": "Chupeta RN",
-    "quantidade": 1,
+    "nome": "Pão doce",
+    "categoria": "comida",
+    "quantidade": 5,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 11,
-    "nome": "Babador",
-    "quantidade": 2,
+    "nome": "Bolo de Chocolate",
+    "categoria": "comida",
+    "quantidade": 4,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 12,
-    "nome": "Garrafa térmica para higiene",
-    "quantidade": 1,
+    "nome": "Bolo de laranja",
+    "categoria": "comida",
+    "quantidade": 5,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 13,
-    "nome": "Meias",
-    "quantidade": 2,
+    "nome": "Sanduíches de frango",
+    "categoria": "comida",
+    "quantidade": 5,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 14,
-    "nome": "Mordedor",
-    "quantidade": 1,
+    "nome": "Salgadinhos Variados",
+    "categoria": "comida",
+    "quantidade": 10,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 15,
-    "nome": "Termômetro para bebê",
-    "quantidade": 1,
+    "nome": "Torta Salgada",
+    "categoria": "comida",
+    "quantidade": 4,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 16,
-    "nome": "Óleo para bebê",
-    "quantidade": 1,
+    "nome": "Frutas picadas",
+    "categoria": "comida",
+    "quantidade": 8,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 17,
-    "nome": "Escova/pente para bebê",
-    "quantidade": 1,
+    "nome": "Pastel",
+    "categoria": "comida",
+    "quantidade": 4,
     "escolhido": 0,
     "ativo": true
   },
   {
     "id": 18,
-    "nome": "Hidratante para bebê",
-    "quantidade": 1,
-    "escolhido": 0,
-    "ativo": true
-  },
-  {
-    "id": 19,
-    "nome": "Kit manicure para bebê",
-    "quantidade": 1,
-    "escolhido": 0,
-    "ativo": true
-  },
-  {
-    "id": 20,
-    "nome": "Aspirador nasal",
-    "quantidade": 1,
-    "escolhido": 0,
-    "ativo": true
-  },
-  {
-    "id": 21,
-    "nome": "Toalha banho",
-    "quantidade": 2,
+    "nome": "Cookies",
+    "categoria": "comida",
+    "quantidade": 6,
     "escolhido": 0,
     "ativo": true
   }

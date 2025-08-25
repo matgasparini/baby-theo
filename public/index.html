@@ -3,56 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chá do Theo</title>
+    <title>Chá de Revelação</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <!-- Header com tema de festa junina -->
+        <!-- Header com tema de chá de revelação -->
         <header class="header">
             <div class="banner">
-                <!-- <div class="lanterns">
-                    <div class="lantern"></div>
-                    <div class="lantern"></div>
-                    <div class="lantern"></div>
-                </div>
-                <h1 class="title">
+                <!-- <h1 class="title">
                     <i class="fas fa-baby"></i>
-                    Chá do Theo
+                    Chá de Revelação
                     <i class="fas fa-baby"></i>
                 </h1>
-                <p class="subtitle">Festa Junina</p>
-                <div class="lanterns">
-                    <div class="lantern"></div>
-                    <div class="lantern"></div>
-                    <div class="lantern"></div>
-                </div> -->
+                <p class="subtitle">Vamos descobrir juntos!</p> -->
             </div>
         </header>
 
         <!-- Formulário principal -->
         <main class="main-content">
             <div class="form-container">
-                                    <div class="welcome-message">
-                        <h2>Você faz parte desse momento especial!</h2>
-                        <p><a style="font-weight: bold;">Escolha um tamanho de fralda e também um mimo</a> do jeitinho que quiser — pode ser lenço umedecido, pomada, roupinha, chupeta ou qualquer outra coisa que você ache especial, mesmo que não esteja na lista. O importante é o carinho!    </p>
-                        <!-- <div class="estatisticas-gerais">
-                            <div class="stat-item">
-                                <span class="stat-number" id="totalPresentes">0</span>
-                                <span class="stat-label">Total de Presentes</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number" id="disponiveis">0</span>
-                                <span class="stat-label">Disponíveis</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number" id="esgotados">0</span>
-                                <span class="stat-label">Esgotados</span>
-                            </div>
-                        </div> -->
-                    </div>
+                <div class="welcome-message">
+                    <h2>Você faz parte desse momento especial!</h2>
+                    <p><strong>Escolha pelo menos uma fralda e um prato</strong> para contribuir com nosso chá revelação. O importante é o carinho e a presença de todos!</p>
+                </div>
 
                 <form id="presenteForm" class="presente-form">
                     <!-- Campo do nome -->
@@ -71,17 +47,32 @@
                         >
                     </div>
 
-                    <!-- Lista de presentes -->
+                    <!-- Lista de Fraldas -->
                     <div class="form-group">
                         <label class="form-label">
-                            <i class="fas fa-gift"></i>
-                            Escolha os Presentes:
+                            <i class="fas fa-baby"></i>
+                            Escolha as Fraldas:
                         </label>
-                        <div id="presentesList" class="presentes-grid">
-                            <!-- Os presentes serão carregados dinamicamente aqui -->
+                        <div id="fraldasList" class="presentes-grid">
+                            <!-- As fraldas serão carregadas dinamicamente aqui -->
                             <div class="loading">
                                 <i class="fas fa-spinner fa-spin"></i>
-                                Carregando presentes...
+                                Carregando fraldas...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lista de Comidas -->
+                    <div class="form-group">
+                        <label class="form-label">
+                            <i class="fas fa-utensils"></i>
+                            Escolha as Comidas:
+                        </label>
+                        <div id="comidasList" class="presentes-grid">
+                            <!-- As comidas serão carregadas dinamicamente aqui -->
+                            <div class="loading">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                Carregando comidas...
                             </div>
                         </div>
                     </div>
@@ -89,7 +80,6 @@
                     <!-- Botão de envio -->
                     <div class="form-group">
                         <button type="submit" class="submit-btn" id="submitBtn">
-                            <!-- <i class="fas fa-paper-plane"></i> -->
                             Enviar
                         </button>
                     </div>
@@ -100,8 +90,8 @@
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
-                <p><a href="https://maps.app.goo.gl/iEwE769pQngXQbXT7" target="_blank">📍 Rua Padre Ildefonso Penalba, 388 - Cachambi.</a></p>
-                <p>🎊 09/08/2025 às 16h</p>
+                <p><a href="https://maps.app.goo.gl/eohb2hCfp6LxrLf26" target="_blank">📍 Estacionamento Rio's (Entre restaurante Assador Rios e Formei fotografia - Aterro do Flamengo).</a></p>
+                <p>🎊 06/09/2025 às 9h</p>
             </div>
         </footer>
     </div>

@@ -4,7 +4,7 @@
 const { google } = require('googleapis');
 
 // Configuração do Google Sheets
-const SPREADSHEET_ID = '1wAdJ6ZHT3L3Jr2x0T4kT3zHeg0HOGsj4JKHpYwKiqiE'; // Substitua pelo ID da sua planilha
+const SPREADSHEET_ID = '1DAHPJEImqnqMG2qXh6kuI87R5trjQLGv1lgBZCj8uAU'; // Substitua pelo ID da sua planilha
 const RANGE = 'A:C'; // Colunas A, B e C
 const API_KEY = 'AIzaSyBx2pAFbepKRMlRdJ8JUvOTWAKrdXWXEuI'; // Substitua pela sua API Key
 

@@ -1,9 +1,11 @@
 // Variáveis globais
 let presentes = [];
-let selectedPresentes = new Set();
+let selectedFraldas = new Set();
+let selectedComidas = new Set();
 
 // Elementos do DOM
-const presentesList = document.getElementById('presentesList');
+const fraldasList = document.getElementById('fraldasList');
+const comidasList = document.getElementById('comidasList');
 const presenteForm = document.getElementById('presenteForm');
 const submitBtn = document.getElementById('submitBtn');
 const successModal = document.getElementById('successModal');
@@ -42,53 +44,76 @@ async function carregarPresentes() {
     }
 }
 
-// Renderizar lista de presentes
+// Renderizar listas de presentes
 function renderizarPresentes() {
     if (presentes.length === 0) {
-        presentesList.innerHTML = `
+        fraldasList.innerHTML = `
             <div class="loading">
                 <i class="fas fa-exclamation-triangle"></i>
-                Nenhum presente disponível no momento.
+                Nenhum item disponível no momento.
+            </div>
+        `;
+        comidasList.innerHTML = `
+            <div class="loading">
+                <i class="fas fa-exclamation-triangle"></i>
+                Nenhum item disponível no momento.
             </div>
         `;
         return;
     }
 
-    presentesList.innerHTML = presentes.map(presente => `
-        <div class="presente-item ${presente.ativo ? '' : 'disabled'}" 
-             data-id="${presente.id}">
-            <input type="checkbox" 
-                   class="presente-checkbox" 
-                   id="presente-${presente.id}"
-                   value="${presente.id}"
-                   ${selectedPresentes.has(presente.id) ? 'checked' : ''}
-                   ${presente.ativo ? '' : 'disabled'}>
-            <div class="presente-nome">${presente.nome}</div>            
-        </div>
-    `).join('');
+    // Separar fraldas e comidas
+    const fraldas = presentes.filter(p => p.categoria === 'fralda');
+    const comidas = presentes.filter(p => p.categoria === 'comida');
+
+    // Renderizar fraldas
+    if (fraldas.length === 0) {
+        fraldasList.innerHTML = `
+            <div class="loading">
+                <i class="fas fa-exclamation-triangle"></i>
+                Nenhuma fralda disponível no momento.
+            </div>
+        `;
+    } else {
+        fraldasList.innerHTML = fraldas.map(fralda => `
+            <div class="presente-item ${fralda.ativo ? '' : 'disabled'}" 
+                 data-id="${fralda.id}" data-categoria="fralda">
+                <input type="checkbox" 
+                       class="presente-checkbox" 
+                       id="fralda-${fralda.id}"
+                       value="${fralda.id}"
+                       ${selectedFraldas.has(fralda.id) ? 'checked' : ''}
+                       ${fralda.ativo ? '' : 'disabled'}>
+                <div class="presente-nome">${fralda.nome}</div>            
+            </div>
+        `).join('');
+    }
+
+    // Renderizar comidas
+    if (comidas.length === 0) {
+        comidasList.innerHTML = `
+            <div class="loading">
+                <i class="fas fa-exclamation-triangle"></i>
+                Nenhuma comida disponível no momento.
+            </div>
+        `;
+    } else {
+        comidasList.innerHTML = comidas.map(comida => `
+            <div class="presente-item ${comida.ativo ? '' : 'disabled'}" 
+                 data-id="${comida.id}" data-categoria="comida">
+                <input type="checkbox" 
+                       class="presente-checkbox" 
+                       id="comida-${comida.id}"
+                       value="${comida.id}"
+                       ${selectedComidas.has(comida.id) ? 'checked' : ''}
+                       ${comida.ativo ? '' : 'disabled'}>
+                <div class="presente-nome">${comida.nome}</div>            
+            </div>
+        `).join('');
+    }
     
-    // <div class="presente-status">
-    //             ${presente.ativo ? 
-    //                 `✅ Disponível (${presente.quantidade - presente.escolhido}/${presente.quantidade})` : 
-    //                 `❌ Esgotado (${presente.escolhido}/${presente.quantidade})`
-    //             }
-    //         </div>
     // Adicionar event listeners após renderizar
     adicionarEventListenersPresentes();
-    
-    // Atualizar estatísticas
-    // atualizarEstatisticas();
-}
-
-// Atualizar estatísticas gerais
-function atualizarEstatisticas() {
-    const totalPresentes = presentes.length;
-    const disponiveis = presentes.filter(p => p.ativo).length;
-    const esgotados = totalPresentes - disponiveis;
-    
-    document.getElementById('totalPresentes').textContent = totalPresentes;
-    document.getElementById('disponiveis').textContent = disponiveis;
-    document.getElementById('esgotados').textContent = esgotados;
 }
 
 // Adicionar event listeners aos presentes
@@ -97,13 +122,14 @@ function adicionarEventListenersPresentes() {
     
     presenteItems.forEach(item => {
         const presenteId = parseInt(item.dataset.id);
+        const categoria = item.dataset.categoria;
         const checkbox = item.querySelector('.presente-checkbox');
         const presente = presentes.find(p => p.id === presenteId);
         
         if (presente && presente.ativo) {
             // Event listener para o checkbox
             checkbox.addEventListener('change', function() {
-                handleCheckboxChange(this, presenteId);
+                handleCheckboxChange(this, presenteId, categoria);
             });
             
             // Event listener para clicar no item (exceto no checkbox)
@@ -111,45 +137,54 @@ function adicionarEventListenersPresentes() {
                 if (e.target !== checkbox) {
                     e.preventDefault();
                     checkbox.checked = !checkbox.checked;
-                    handleCheckboxChange(checkbox, presenteId);
+                    handleCheckboxChange(checkbox, presenteId, categoria);
                 }
             });
         }
     });
 }
 
-
-
 // Manipular mudança no checkbox
-function handleCheckboxChange(checkbox, presenteId) {
-    console.log('Presente selecionado:', presenteId, 'Checked:', checkbox.checked);
-    console.log('Set antes:', Array.from(selectedPresentes));
+function handleCheckboxChange(checkbox, presenteId, categoria) {
+    console.log('Item selecionado:', presenteId, 'Categoria:', categoria, 'Checked:', checkbox.checked);
     
-    if (checkbox.checked) {
-        selectedPresentes.add(presenteId);
-        checkbox.closest('.presente-item').classList.add('selected');
-        dispararEventoPresenteSelecionado(); // Disparar efeito visual
-    } else {
-        selectedPresentes.delete(presenteId);
-        checkbox.closest('.presente-item').classList.remove('selected');
+    if (categoria === 'fralda') {
+        if (checkbox.checked) {
+            selectedFraldas.add(presenteId);
+            checkbox.closest('.presente-item').classList.add('selected');
+        } else {
+            selectedFraldas.delete(presenteId);
+            checkbox.closest('.presente-item').classList.remove('selected');
+        }
+    } else if (categoria === 'comida') {
+        if (checkbox.checked) {
+            selectedComidas.add(presenteId);
+            checkbox.closest('.presente-item').classList.add('selected');
+        } else {
+            selectedComidas.delete(presenteId);
+            checkbox.closest('.presente-item').classList.remove('selected');
+        }
     }
     
-    console.log('Set depois:', Array.from(selectedPresentes));
+    dispararEventoPresenteSelecionado(); // Disparar efeito visual
     atualizarBotaoEnvio();
 }
 
 // Atualizar estado do botão de envio
 function atualizarBotaoEnvio() {
     const nome = document.getElementById('nome').value.trim();
-    const temPresentes = selectedPresentes.size > 0;
+    const temFraldas = selectedFraldas.size > 0;
+    const temComidas = selectedComidas.size > 0;
     
-    // Botão habilitado se tem nome, mas mostra mensagem diferente baseada na seleção de presentes
-    submitBtn.disabled = !nome || !temPresentes;
+    // Botão habilitado se tem nome, pelo menos uma fralda e pelo menos uma comida
+    submitBtn.disabled = !nome || !temFraldas || !temComidas;
     
     if (!nome) {
         submitBtn.textContent = 'Digite seu nome';
-    } else if (!temPresentes) {
-        submitBtn.textContent = 'Escolha pelo menos um presente';
+    } else if (!temFraldas) {
+        submitBtn.textContent = 'Escolha pelo menos uma fralda';
+    } else if (!temComidas) {
+        submitBtn.textContent = 'Escolha pelo menos uma comida';
     } else {
         submitBtn.innerHTML = 'Enviar';
     }
@@ -160,17 +195,26 @@ async function handleFormSubmit(event) {
     event.preventDefault();
     
     const nome = document.getElementById('nome').value.trim();
-    const presentesEscolhidos = Array.from(selectedPresentes);
+    const fraldasEscolhidas = Array.from(selectedFraldas);
+    const comidasEscolhidas = Array.from(selectedComidas);
     
     if (!nome) {
         mostrarErro('Por favor, preencha seu nome.');
         return;
     }
     
-    if (presentesEscolhidos.length === 0) {
-        mostrarErro('Por favor, escolha pelo menos um presente.');
+    if (fraldasEscolhidas.length === 0) {
+        mostrarErro('Por favor, escolha pelo menos uma fralda.');
         return;
     }
+    
+    if (comidasEscolhidas.length === 0) {
+        mostrarErro('Por favor, escolha pelo menos uma comida.');
+        return;
+    }
+    
+    // Combinar todas as escolhas
+    const presentesEscolhidos = [...fraldasEscolhidas, ...comidasEscolhidas];
     
     // Desabilitar botão durante o envio
     submitBtn.disabled = true;
@@ -195,7 +239,8 @@ async function handleFormSubmit(event) {
             
             // Limpar formulário
             document.getElementById('nome').value = '';
-            selectedPresentes.clear();
+            selectedFraldas.clear();
+            selectedComidas.clear();
             
             // Recarregar presentes para atualizar disponibilidade
             await carregarPresentes();
@@ -254,51 +299,6 @@ function adicionarEfeitosVisuais() {
         // criarConfete();
     });
 }
-
-// Criar efeito de confete
-// function criarConfete() {
-//     const cores = ['#ff6b6b', '#ffa726', '#66bb6a', '#42a5f5', '#ab47bc', '#ffeb3b'];
-    
-//     for (let i = 0; i < 20; i++) {
-//         setTimeout(() => {
-//             const confete = document.createElement('div');
-//             confete.style.cssText = `
-//                 position: fixed;
-//                 top: -10px;
-//                 left: ${Math.random() * window.innerWidth}px;
-//                 width: 10px;
-//                 height: 10px;
-//                 background: ${cores[Math.floor(Math.random() * cores.length)]};
-//                 border-radius: 50%;
-//                 pointer-events: none;
-//                 z-index: 9999;
-//                 animation: confeteFall 3s linear forwards;
-//             `;
-            
-//             document.body.appendChild(confete);
-            
-//             setTimeout(() => {
-//                 confete.remove();
-//             }, 3000);
-//         }, i * 100);
-//     }
-// }
-
-// Adicionar CSS para animação do confete
-// const confeteStyle = document.createElement('style');
-// confeteStyle.textContent = `
-//     @keyframes confeteFall {
-//         0% {
-//             transform: translateY(-10px) rotate(0deg);
-//             opacity: 1;
-//         }
-//         100% {
-//             transform: translateY(100vh) rotate(360deg);
-//             opacity: 0;
-//         }
-//     }
-// `;
-// document.head.appendChild(confeteStyle);
 
 // Inicializar efeitos visuais
 adicionarEfeitosVisuais();
