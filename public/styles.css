@@ -252,34 +252,6 @@ body {
     margin-top: 20px;
 }
 
-/* Estilos específicos para fraldas */
-#fraldasList .presente-item {
-    border-left: 5px solid #4caf50;
-}
-
-#fraldasList .presente-item:hover {
-    border-left-color: #2e7d32;
-}
-
-#fraldasList .presente-item.selected {
-    border-left-color: #2e7d32;
-    background: linear-gradient(135deg, #e8f5e8, #f1f8e9);
-}
-
-/* Estilos específicos para comidas */
-#comidasList .presente-item {
-    border-left: 5px solid #ff9800;
-}
-
-#comidasList .presente-item:hover {
-    border-left-color: #e65100;
-}
-
-#comidasList .presente-item.selected {
-    border-left-color: #e65100;
-    background: linear-gradient(135deg, #fff3e0, #ffe0b2);
-}
-
 .presente-item {
     background: white;
     border: 3px solid #ddd;
